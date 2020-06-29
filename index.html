@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/section.css">
+    <script defer src="js/script.js"></script>
     <title>to do List</title>
 </head>
 
@@ -20,14 +21,15 @@
     <main>
         <section class="section">
             <h2 class="section__headline">Dodaj nowe zadanie</h2>
-            <form class="section__form">
-                <input class="section__formField" name="newTask" placeholder="Co jest do zrobienia?">
+            <form class="section__form js-form">
+                <input class="section__formField js-enterNewTask" name="newTask" placeholder="Co jest do zrobienia?">
                 <button class="section__button">Dodaj zadanie</button>
             </form>
             </div>
         </section>
         <section class="section">
             <h2 class="section__headline">Lista zadań</h2>
+            <ul class="section__list js-taskList"></ul>
         </section>
     </main>
 
