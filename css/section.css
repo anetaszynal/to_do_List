@@ -1,0 +1,31 @@
+.section {
+    margin: 7px auto;
+    max-width: 70%;
+    background-color: white;
+}
+
+.section__headline {
+    margin: 0px;
+    padding: 15px;
+    font-size: 18px;
+    border-bottom: 3px solid rgb(238, 238, 238);
+}
+
+.section__form {
+    font-size: 14px;
+}
+
+.section__formField {
+    margin: 15px;
+    padding: 6px;
+    border: 2px solid rgb(238, 238, 238);
+    width: 75%;
+}
+
+.section__button {
+    padding: 6px;
+    background-color: teal;
+    color: white;
+    border: none;
+    width: 17%;
+}
