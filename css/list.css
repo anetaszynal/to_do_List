@@ -16,7 +16,8 @@
 }
 
 .list__button {
-    margin: 10px 15px ;
+    background-color: green;
+    margin: 10px 15px;
     border: none;
     width: 25px;
     height: 25px;
@@ -29,7 +30,12 @@
 }
 
 .list__button--done {
-    background-color: green;
+    background-image: url("../images/checked.png");
+    background-position: center;
+}
+
+.list__task--done{
+    text-decoration: line-through;
 }
 
 
