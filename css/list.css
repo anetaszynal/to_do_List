@@ -1,0 +1,35 @@
+.list {
+    list-style: none;
+    min-height: 55px;
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+.list__items {
+    padding: 10px;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid rgb(238, 238, 238);
+}
+
+.list__button {
+    margin: 10px 15px ;
+    border: none;
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+}
+
+.list__button--deleted {
+    background-image: url("../images/bin.png");
+    background-size: 25px;
+}
+
+.list__button--done {
+    background-color: green;
+}
+
+
