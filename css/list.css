@@ -35,3 +35,7 @@
 .list__taskName--done {
     text-decoration: line-through;
 }
+
+.list__tasksName {
+    flex-grow: 1;
+}
