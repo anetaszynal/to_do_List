@@ -53,11 +53,25 @@
             return;
         };
         addNewTask(newTaskElement);
+        resetForm();
+    };
+
+    const resetForm = () => {
+        document.querySelector(".js-form").reset();
+    };
+
+    const onFormFocus = () => {
+        const focusOnImputElement = document.querySelector(".js-addTaksButton");
+        focusOnImputElement.addEventListener("click", () => {
+            document.querySelector(".js-enterNewTask").focus();
+        });
+
     };
 
     const init = () => {
         const formElement = document.querySelector(".js-form");
         formElement.addEventListener("submit", onFormSubmit);
+        onFormFocus();
     };
 
     init();
