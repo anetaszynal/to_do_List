@@ -18,7 +18,7 @@
 
 .section__formField {
     margin: 15px;
-    padding: 6px;
+    padding: 5px;
     border: 2px solid rgb(238, 238, 238);
     flex-grow: 1;
 }

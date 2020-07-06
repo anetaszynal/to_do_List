@@ -15,6 +15,7 @@
 
 .list__button {
     background-color: green;
+    color: white;
     margin: 10px 15px;
     border: none;
     width: 25px;
@@ -25,11 +26,6 @@
 .list__button--deleted {
     background-image: url("../images/bin.png");
     background-size: 25px;
-}
-
-.list__button--done {
-    background-image: url("../images/checked.png");
-    background-position: center;
 }
 
 .list__taskName--done {
