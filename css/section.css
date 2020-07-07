@@ -7,13 +7,18 @@
 .section__headline {
     margin: 0px;
     padding: 15px;
-    font-size: 18px;
     border-bottom: 3px solid rgb(238, 238, 238);
 }
 
 .section__form {
     font-size: 16px;
     display: flex;
+}
+
+@media (max-width: 414px) {
+    .section__form {
+        flex-wrap: wrap;
+    }
 }
 
 .section__formField {
@@ -38,11 +43,21 @@
 }
 
 @media (max-width: 414px) {
-    .section__form {
-        flex-wrap: wrap;
-    }
     .section__button {
         flex-grow: 1;
         margin: 0 15px 15px 15px;
     }
 }
+
+.section__button--markTaskDone {
+    border: none;
+    background: none;
+    color: teal;
+    font-size: 16px;
+    float: right;
+}
+
+.section__button--markTaskDone:hover {
+    color: hsl(180, 100%, 35%);
+} 
+

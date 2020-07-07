@@ -38,6 +38,7 @@
 
     const render = () => {
         let newTaskRow = "";
+        let toggleVisabilityTaskDoneButton = "";
 
         for (const task of tasks) {
             newTaskRow += `
@@ -52,8 +53,17 @@
               🗑
               </button>
             </li>`;
+            toggleVisabilityTaskDoneButton += `
+            Lista zadań
+            <button class="section__button--markTaskDone">
+            Pokaż ukończone
+            </button>
+            <button class="section__button--markTaskDone">
+            Ukończ wszystkie
+            </button>`
         };
         document.querySelector(".js-taskList").innerHTML = newTaskRow;
+        document.querySelector(".js-toggleTaskButton").innerHTML=toggleVisabilityTaskDoneButton;
         bindToggleDoneEvents();
         bindRemoveEvents();
     };
