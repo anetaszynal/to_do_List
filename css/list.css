@@ -21,11 +21,19 @@
     width: 25px;
     height: 25px;
     flex-shrink: 0;
+    transition: background 1s;
+}
+
+.list__button:hover {
+   background: hsl(120, 100%, 35%);
 }
 
 .list__button--deleted {
-    background-image: url("../images/bin.png");
-    background-size: 25px;
+    background-color: hsl(0, 100%, 40%);
+}
+
+.list__button--deleted:hover {
+    background: hsl(0, 100%, 60%);
 }
 
 .list__taskName--done {

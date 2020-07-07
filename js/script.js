@@ -49,6 +49,7 @@
                 ${task.content}
               </span>
               <button class="list__button list__button--deleted js-deleteTaskButton">
+              🗑
               </button>
             </li>`;
         };
