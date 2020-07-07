@@ -1,11 +1,13 @@
 {
-    const tasks = [];
+    let tasks = [];
 
     const addNewTask = (newTask) => {
         tasks.push({
             content: newTask,
+            done: false,
         });
         render();
+
     };
 
     const toggleTaskDone = (taskIndex) => {
@@ -36,9 +38,25 @@
         });
     };
 
+    const markAllAsDone = () => {
+        tasks = tasks.map(todoTask => {
+            return { ...todoTask, done: true }
+        })
+      
+        render();
+    };
+
+    const selectAllTaskAsDone = () => {
+        const selectAllTaskElement = document.querySelector(".js-selectAll");
+        selectAllTaskElement.addEventListener("click", () => {
+            markAllAsDone();
+
+        });
+    };
+
+
     const render = () => {
         let newTaskRow = "";
-        let toggleVisabilityTaskDoneButton = "";
 
         for (const task of tasks) {
             newTaskRow += `
@@ -53,19 +71,31 @@
               🗑
               </button>
             </li>`;
-            toggleVisabilityTaskDoneButton += `
-            Lista zadań
-            <button class="section__button--markTaskDone">
-            Pokaż ukończone
-            </button>
-            <button class="section__button--markTaskDone">
-            Ukończ wszystkie
-            </button>`
         };
         document.querySelector(".js-taskList").innerHTML = newTaskRow;
-        document.querySelector(".js-toggleTaskButton").innerHTML=toggleVisabilityTaskDoneButton;
+        deleteButtonsFromHeadline();
         bindToggleDoneEvents();
         bindRemoveEvents();
+        selectAllTaskAsDone();
+
+    };
+
+    const addButtonsToHeadline = () => {
+        document.querySelector(".js-toggleTaskButton").innerHTML = `
+        Lista zadań
+        <button class="section__button--markTaskDone js-selectAll">
+        Ukończ wszystkie
+        </button>
+        <button class="section__button--markTaskDone">
+        Pokaż ukończone
+        </button>`
+    }
+
+    const deleteButtonsFromHeadline = () => {
+        if (tasks.length === 0) {
+            return document.querySelector(".js-toggleTaskButton").innerHTML = `Lista zadań`
+        };
+        addButtonsToHeadline();
     };
 
     const onFormSubmit = (event) => {
@@ -95,6 +125,7 @@
         const formElement = document.querySelector(".js-form");
         formElement.addEventListener("submit", onFormSubmit);
         onFormFocus();
+
     };
 
     init();
